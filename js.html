@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      let data = [
+            { id: 1, name: "Alice", age: 22 },
+            { id: 2, name: "Bob", age: 19 },
+            { id: 3, name: "Chris", age: 20 },
+            { id: 4, name: "Dave", age: 18 },
+            { id: 5, name: "Eve", age: 24 },
+        ];
+
+        let result2 = data
+            .filter(user => user.age < 20)
+            .map(user => user.name);
+
+        let names = data.map(user => user.name);
+
+        let u20 = data.filter(user => user.age <= 20);
+
+        let result = data
+            .filter(user => user.age <= 20)
+            .map(user => user.name);
+
+        // Object Creation Javascript    
+        let user = {
+            name: "Alice",
+            hello: function() {
+                return `Hello ${this.name}`;
+            }
+        };
+
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+
+            static info = "Animal";
+
+            hello() {
+                return `Hello ${this.name}`;
+            }
+        }
+
+        class Dog extends Animal {
+            run() {
+                return `${this.name} is running...`;
+            }
+        }
+
+        let lucy = new Dog("Lucy");
+  </script>
+</body>
+</html>

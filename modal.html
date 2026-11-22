@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 1000px;
+            margin: auto;
+            font-size: 1.5em;
+        }
+
+        button {
+            font-size: 0.8em;
+            padding: 10px 20px;
+        }
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0.5;
+            display: none;
+        }
+
+        #modal {
+            position: absolute;
+            width: 40%;
+            top: -350px;
+            left: 30%;
+            background: #333;
+            height: 300px;
+            border-radius: 20px;
+            transition: all 0.5s;
+        }
+
+        #modal h2 {
+            color: white;
+            margin: 0;
+            padding: 20px;
+            font-size: 1em;
+            background: #222;
+            border-radius: 20px 20px 0 0;
+        }
+
+        #modal h2 a {
+            text-decoration: none;
+            color: red;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Home Page</h1>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quos aperiam natus aliquid nihil quae nam, tempore temporibus in aliquam eum, unde velit tempora dolore, excepturi placeat ab deserunt distinctio.</p>
+
+    <button onclick="show()">Button</button>
+
+    <div id="overlay" onclick="hide()"></div>
+
+    <div id="modal">
+        <h2>
+            Modal Title <a href="#" onclick="hide()">&times;</a>
+        </h2>
+    </div>
+
+    <script>
+        function show() {
+            document.querySelector("#overlay").style.display = "block";
+            document.querySelector("#modal").style.top = "15%";
+        }
+
+        function hide() {
+            document.querySelector("#overlay").style.display = "none";
+            document.querySelector("#modal").style.top = "-350px";
+        }
+    </script>
+
+</body>
+</html>
